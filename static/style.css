@@ -1,0 +1,47 @@
+/* h1 {
+    border: 2px #eee solid;
+    color: brown;
+    text-align: center;
+    padding: 10px;
+} */
+
+.match {
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    background-color: #ffffff;
+    transition: transform 0.2s ease-in-out;
+}
+
+.match:hover {
+    transform: translateY(-5px);
+    box-shadow: 2px 4px 8px rgba(0,0,0,0.1);
+}
+
+.teams {
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.away_team, .home_team {
+    display: inline-block;
+    font-weight: bold;
+}
+
+.separator {
+    margin: 0 10px;
+    font-size: 0.8em;
+}
+
+.date, .time {
+    color: #777777;
+    text-align: center;
+    font-style: italic;
+}
+
+.date {
+    margin-bottom: 5px;
+}

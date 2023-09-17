@@ -1,0 +1,19 @@
+
+<head>
+    <title>NBA</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<h1> Welcome to NBA Schedule </h1>
+{% for schedule in schedules %}
+<div class="match">
+    <div class="teams">
+        <span class="away_team">{{ schedule['away'] }}</span>
+        <span class="separator"> vs </span>
+        <span class="home_team">{{ schedule['home'] }}</span>
+    </div>
+    <div class="date">{{ schedule['match_date'] }}</div>
+    <div class="time">{{ schedule['match_time'] }}</div>
+</div>
+        
+{% endfor %}
