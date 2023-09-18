@@ -1,47 +1,62 @@
-/* h1 {
-    border: 2px #eee solid;
-    color: brown;
+h1, h2 {
     text-align: center;
-    padding: 10px;
-} */
+    margin-bottom: 20px;
+}
 
 .match {
     border: 1px solid #e0e0e0;
-    padding: 15px;
-    margin: 20px 0;
-    border-radius: 8px;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
-    background-color: #ffffff;
-    transition: transform 0.2s ease-in-out;
-}
-
-.match:hover {
-    transform: translateY(-5px);
-    box-shadow: 2px 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .teams {
-    font-size: 1.5em;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
     margin-bottom: 10px;
 }
 
-.away_team, .home_team {
-    display: inline-block;
+/* NBA Styles */
+.nba_schedule .away_team, .nba_schedule .home_team {
+    font-size: 1.2em;
+    margin: 0 10px;
+}
+
+/* Tennis Styles */
+.tennis_schedule .gamename {
+    width: 100%;
+    text-align: center;
     font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 1.4em;
+}
+
+.tennis_schedule .player1, .tennis_schedule .player2 {
+    font-size: 1.3em;
+    margin: 0 10px;
 }
 
 .separator {
-    margin: 0 10px;
-    font-size: 0.8em;
+    font-size: 1.1em;
+    margin: 0 5px;
+    color: #777;
 }
 
-.date, .time {
-    color: #777777;
-    text-align: center;
-    font-style: italic;
+.date, .time, .category {
+    font-size: 0.9em;
+    margin: 5px 0;
+    color: #555;
 }
 
-.date {
-    margin-bottom: 5px;
+.category {
+    font-weight: bold;
+    color: #444;
+    margin-top: 10px;
 }

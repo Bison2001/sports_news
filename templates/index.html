@@ -4,16 +4,38 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
-<h1> Welcome to NBA Schedule </h1>
-{% for schedule in schedules %}
-<div class="match">
-    <div class="teams">
-        <span class="away_team">{{ schedule['away'] }}</span>
-        <span class="separator"> vs </span>
-        <span class="home_team">{{ schedule['home'] }}</span>
+<h1> Welcome to Sports Schedule </h1>
+<div class="nba_schedule">
+    <h2>NBA Matches</h2>
+    {% for schedule in schedules %}
+    <div class="match">
+        <div class="teams">
+            <span class="away_team">{{ schedule['away'] }}</span>
+            <span class="separator"> vs </span>
+            <span class="home_team">{{ schedule['home'] }}</span>
+        </div>
+        <div class="date">{{ schedule['match_date'] }}</div>
+        <div class="time">{{ schedule['match_time'] }}</div>
     </div>
-    <div class="date">{{ schedule['match_date'] }}</div>
-    <div class="time">{{ schedule['match_time'] }}</div>
+            
+    {% endfor %}
+</div>
+
+<div class="tennis_schedule">
+    <h2>Tennis Matches</h2>
+    {% for tennis_schedule in tennis_schedules %}
+    <div class="match">
+        <div class="teams">
+            <div class="gamename">{{ tennis_schedule['game_name'] }}</div>
+            <span class="player1">{{ tennis_schedule['player1'] }}</span>
+            <span class="separator"> vs </span>
+            <span class="player2">{{ tennis_schedule['player2'] }}</span>
+        </div>
+        <div class="date">{{ tennis_schedule['match_date'] }}</div>
+        <div class="time">{{ tennis_schedule['match_time'] }}</div>
+        <div class="category">{{ tennis_schedule['match_category'] }}</div>
+    </div>
+    {% endfor %}
 </div>
         
-{% endfor %}
+
